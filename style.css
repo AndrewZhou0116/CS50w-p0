@@ -35,7 +35,7 @@ body {
 }
 
 .art { flex: 0 1 400px; background: transparent; padding: 0; border: 0; }
-.art img { display: block; width: 330px; height: auto; border-radius: 8px; }
+.art img { display: block; width: 370px; height: auto; border-radius: 8px; }
 
 /* ---------- top nav ---------- */
 .topnav {
@@ -48,7 +48,7 @@ body {
 .topnav a:hover { text-decoration: underline; color: rgb(164,4,142); }
 
 /* ---------- search form (index/image) ---------- */
-.search { display: flex; justify-content: flex-start; gap: 8px; margin: 15px; }
+.search { display: flex; justify-content:first baseline; gap: 8px; margin: 21px; }
 .search input[type="text"], .search input[type="search"] {
   color: sienna; background: gainsboro; min-width: 260px;
   padding: 10px 12px; border: 1px solid gainsboro; border-radius: 10px;
@@ -66,15 +66,16 @@ body {
 .decor-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 3fr));
-  gap: 1px; 
+  gap: 8px; 
+  margin: 2px 16px;
 }
-.decor { overflow: hidden; border-radius: 12px; margin:20px;background-color: #334155;}
+.decor { overflow: hidden; border-radius: 15px; margin:0px;padding:0px;}
 .decor img { display: block; width: 100%; height: 200px; object-fit: cover; }
 
 /* ---------- advanced page: form + picture ---------- */
 .adv-wrap {
   display: grid; grid-template-columns: 1.2fr .8fr;
-  gap: 6px; margin: 15px; align-items: start;
+  gap: 6px; margin: 15px; align-items:center;
 }
 @media (max-width: 800px) { .adv-wrap { grid-template-columns: 1fr; } }
 
@@ -84,7 +85,7 @@ body {
 
 /* advanced form grid */
 .adv-form { display: grid; grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 14px 16px; align-items: start; max-width: 900px; }
+  gap: 14px 16px; align-items:center; max-width: 900px; }
 @media (max-width: 640px) { .adv-form { grid-template-columns: 1fr; } }
 .field { display: grid; gap: 6px; }
 .adv-form label { font-weight: 600; font-size: 14px; color: #334155; }
@@ -93,8 +94,9 @@ body {
   border: 1px solid gainsboro; border-radius: 10px;
 }
 .adv-form button {
-  grid-column: 1 / -1; justify-self: start;
+  grid-column: 1 / -1; justify-self:center;
   padding: 10px 12px; border: 0; border-radius: 10px;
-  background: darkolivegreen; color: beige; font-weight: 600;
-}
+  background: darkolivegreen; color: beige; font-weight: 600;transition: box-shadow .2s ease;
+  
+}.adv-button button:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(216, 28, 191, 0.12); }
 
